@@ -19,7 +19,7 @@ public class Main {
                 Connection conn = DriverManager.getConnection(url, user, password);
 
                 // INSERT
-          /**   String insertQuery = "INSERT INTO `technologicaldevice`.`producto` (`categoria`, `nombre`, `descripcion`, `valor`, `cantidad`) VALUES ('Audifonos ', 'ASUS', 'SONIDO FULL', '325000', '152')";
+            String insertQuery = "INSERT INTO `technologicaldevice`.`producto` (`categoria`, `nombre`, `descripcion`, `valor`, `cantidad`) VALUES ('Audifonos ', 'ASUS', 'SONIDO FULL', '325000', '152')";
                 int rowsAffected = conn.createStatement().executeUpdate(insertQuery);
                 if (rowsAffected > 0){
                     System.out.println(rowsAffected + "rowsAffected");
@@ -30,10 +30,10 @@ public class Main {
                     System.out.println(rs.getString("nombre"));
                     System.out.println(" ");
                 }
-              } **/
+              }
 
                 //UPDATE
-          /**      String updateQuery = "Update producto SET nombre = 'HP', " +
+               String updateQuery = "Update producto SET nombre = 'HP', " +
                                      "descripcion = 'impresora'  WHERE idProducto = '4'";
                 int rowsUpdate = conn.createStatement().executeUpdate(updateQuery );
                 if (rowsUpdate > 0) {
@@ -44,7 +44,7 @@ public class Main {
                         System.out.println(rs.getString("nombre"));
                         System.out.println(" ");
                     }
-                } **/
+                } 
 
                 // DELETE
                 String deleteQuery = "Delete from producto where idProducto >= 5";
